@@ -1,0 +1,305 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*colocar a fonte dentro do projeto*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/OpenSans-Semibold.ttf');
+}
+
+/*estrutura de todo o html*/
+html, textarea{
+    font-family: 'OpenSans';
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+iframe{
+   /* background-color: darkblue;*/
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/*menu*/
+.menu-container{
+    width: 250px; /*largura*/
+    background-color: pink; /*cor de fundo*/
+    height: 100%; /*altura*/
+    position: fixed; /*posção*/
+}
+
+/*logo*/
+.logo{
+    width: 100%; /*largura*/
+    padding: 50px 20px 30px 20px; /*distanciamento das bordas*/
+}
+
+.logo:hover{
+    filter: saturate(0%); /*deixar o logo preto e branco quando o mouse ficar em cima*/
+    transition: .5s; /*demora para ficar preto e branco*/
+}
+
+/*menu*/
+.menu-container li a{
+    /*background-color: red;*/ /*cor de fundo*/
+    display: block; /*fundo*/
+    padding: 15px; /*distancia*/
+    margin: 10px; /*aumentar margem*/
+    color: white; /*cor fonte*/
+    text-transform: uppercase; /*letras maiusculas*/
+    transition: .5s; /*efeito do menu*/
+}
+
+/*mexer no cursor do mouse*/
+.menu-container li a:hover{
+    background-color: hotpink; /*fundo do mouse no menu*/
+    transition: .5s; /*tempo de acionamento*/
+    padding: 20%;
+    
+}
+
+/*edição do copy right*/
+.menu-container p{
+    font-size: 12px; /*tamanho fonte*/
+    color: #333; /*cor fonte*/
+    padding: 20px; /*distanciamento das bordas*/
+    position: absolute; /*posição*/
+    bottom: 10px; /*distancia do fim da página*/
+}
+
+/*container*/
+.container{
+    background-color:whitesmoke; /*cor de fundo*/
+    width: calc(100% - 250px); /*tamanho da margem*/
+    margin-left: 250px; /*direcionamento para o direito*/
+    height: 100%; /*largura da margem*/
+    position: absolute;
+}
+
+/*home*/
+.topo{
+    background-image: url('../img/banner2.jpg');
+    padding: 10em 2em;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.topo h1{
+    font-size: 60px;
+    color: white;
+    text-shadow: 1px 1px 3px #333;
+}
+
+/*modificação do spam*/
+
+span{
+    /*background-color: thistle;*/
+    color: hotpink;
+}
+
+/*home container*/
+.home-container{
+    padding-top: 20px;
+    display: grid;
+    grid-template-areas: "it1 it2 it3 it4";
+    grid-template-columns: 30% auto 30% auto ;
+}
+
+.itens1{
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    grid-area: it1;
+    height: 40vh;
+}
+
+.itens2{
+    grid-area: it2;
+    height: 40vh;
+    padding: 20px;
+}
+
+.itens2 p, .itens4 p{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.itens3{
+    background-image: url('../img/banner3.jpg');
+    background-position: center;
+    background-size: cover;
+    grid-area: it3;
+    height: 40vh;
+}
+
+.itens4{
+    grid-area: it4;
+    height: 40vh;
+    padding: 20px;
+}
+
+/*btn-default = botões*/
+.btn-default{
+    padding: 20px 40px;
+    border: 0;
+    background-color: palevioletred;
+    color: white;
+}
+
+.btn-default:hover{
+    background-color: pink;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/*Products*/
+.product-container{
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+}
+
+.product-container h1{
+    margin-bottom: 20px;
+}
+
+.product-container details{
+    font-size: 20px;
+    padding: 10px;
+
+
+}
+
+.product-container figure img{
+    width: 75%;
+}
+
+/*about*/
+.about-container{
+    background-image: url(../img/banner4.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10em 2em;
+}
+
+.about-container h1{
+    color: white;
+    text-shadow: 1px 1px 3px #333;
+}
+
+.about-content{
+    background-color: rgba(255, 255, 255, .8);
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas: "ac1 ac2";
+    grid-template-columns: 50% 50%;
+}
+
+.about-itens1 {
+    grid-area: ac1;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.about-itens2 {
+    grid-area: ac2;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.about-itens2 p{
+    padding: 20px 0;
+}
+
+
+video{
+    width: 100%;
+    height: auto;
+}
+
+/*Gallery*/
+.gallery-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 20px;
+}
+
+.gallery-itens{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+}
+
+.gallery-itens img{
+    width: 100%;
+    height: 100%;
+    filter: saturate(0%);
+    position: relative;
+    transition: .5s;
+}
+
+.gallery-itens img:hover{
+    cursor: pointer;
+    filter: saturate(100%);
+    transition: .5s;
+}
+
+.gallery-itens p{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 10px;
+
+}
+
+/*Contact*/
+.contact-container{
+    background-color: rgba(255, 255, 255, .8);
+    width: 100%;
+    height: 100%;
+    padding: 2em 2em;
+    position: relative;
+}
+
+.contact-container h1{
+    color: #333;
+}
+
+.contact-itens{
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.contact-itens textarea{
+    width: 100%;
+    height: 250px;
+}
+
+.cx-text{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid hotpink; /*cor e expessura da borda*/
+    border-radius: 10px; /*borda do input*/
+}
